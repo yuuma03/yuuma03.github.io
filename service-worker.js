@@ -3,8 +3,8 @@ var cacheName = 'app-cache';
 var filesToCache = [
   '/',
   '/index.html',
-  '/style.css',
-  '/script.js',
+  '/styles.css',
+  '/scripts.js',
   '/sun.png'
 ];
 
