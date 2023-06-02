@@ -120,8 +120,11 @@ body{
   margin-top: 20px;
 }
 
-.title-add{
+.title-add {
   color: #000000;
+  background: #fff;
+  padding-top: 1px;
+  width: 80vw;
 }
 
 .hidden{
@@ -284,6 +287,13 @@ button {
   justify-content: center;
   margin: 0 15px;
   max-height: 550px;
+}
+
+.close-add {
+  position: fixed;
+  top: 17px;
+  left: 85vw;
+  z-index: 11;
 }
 
 .clock-container {
