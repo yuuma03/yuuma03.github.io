@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Routine Master</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="manifest" href="/manifest.json">
+  </head>
+  <body class="body-morning" >
+    <header>
+      <svg class="menu-icon" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18.8889 2.22222H1.11111C0.816426 2.22222 0.533811 2.10516 0.325437 1.89679C0.117063 1.68841 0 1.4058 0 1.11111C0 0.816426 0.117063 0.533811 0.325437 0.325437C0.533811 0.117063 0.816426 0 1.11111 0H18.8889C19.1836 0 19.4662 0.117063 19.6746 0.325437C19.8829 0.533811 20 0.816426 20 1.11111C20 1.4058 19.8829 1.68841 19.6746 1.89679C19.4662 2.10516 19.1836 2.22222 18.8889 2.22222ZM18.8889 7.77778H1.11111C0.816426 7.77778 0.533811 7.66071 0.325437 7.45234C0.117063 7.24397 0 6.96135 0 6.66667C0 6.37198 0.117063 6.08937 0.325437 5.88099C0.533811 5.67262 0.816426 5.55556 1.11111 5.55556H18.8889C19.1836 5.55556 19.4662 5.67262 19.6746 5.88099C19.8829 6.08937 20 6.37198 20 6.66667C20 6.96135 19.8829 7.24397 19.6746 7.45234C19.4662 7.66071 19.1836 7.77778 18.8889 7.77778ZM18.8889 13.3333H1.11111C0.816426 13.3333 0.533811 13.2163 0.325437 13.0079C0.117063 12.7995 0 12.5169 0 12.2222C0 11.9275 0.117063 11.6449 0.325437 11.4365C0.533811 11.2282 0.816426 11.1111 1.11111 11.1111H18.8889C19.1836 11.1111 19.4662 11.2282 19.6746 11.4365C19.8829 11.6449 20 11.9275 20 12.2222C20 12.5169 19.8829 12.7995 19.6746 13.0079C19.4662 13.2163 19.1836 13.3333 18.8889 13.3333Z" fill="white"/>
+      </svg>
+      <h1 class="title-morning">Manhã</h1>
+      <h1 class="title-afternoon hidden">Tarde</h1>
+      <h1 class="title-night hidden">Noite</h1>
+      <h1 class="title-add hidden">Escolha um novo hábito</h1>    
+    </header>
+    <main class="main-container">
+      <div class="menu-main">
+        <span class="menu-title">Routine Master</span>
+        <svg class="menu-close" width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 7.5188L9 17.5188" stroke="#1D1617" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9 7.5188L19 17.5188" stroke="#1D1617" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect width="28" height="24.4211" rx="4" fill="#848484" fill-opacity="0.15"/>
+        </svg>
+        <div class="menu-bottom">
+          <span class="menu-about">Sobre nós</span>
+          <span class="menu-version">V 1.0.0</span>
+        </div>
+      </div>
+      <div class="about-us">
+        <span class="about-title">Sobre nós</span>
+        <svg class="about-close" width="28" height="25" viewBox="0 0 28 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 7.5188L9 17.5188" stroke="#1D1617" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9 7.5188L19 17.5188" stroke="#1D1617" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect width="28" height="24.4211" rx="4" fill="#848484" fill-opacity="0.15"/>
+        </svg>
+        <span class="about-text">Somos um grupo de estudantes do curso de Ciências da Computação da Univem, e este é o nosso projeto final da disciplina Mobile systems.</span>
+      </div>
+      <section class="button-section">
+        <button class="button-add"> + </button>
+        <button class="button-main button-morning hidden">MANHÃ</button>
+        <button class="button-main button-afternoon">TARDE</button>
+        <button class="button-main button-night">NOITE</button>
+      </section>
+      <section class="add-container hidden">
+        <div class="clock-container">
+          <input type="text" class="clock-title" placeholder="Tarefa">
+          <span class="clock-span"> Horário </span>
+          <div class="container-fluid">
+            <div class="time mt-5 pt-5">
+              <div class="selected">
+                <span class="time-btn" id="hours">12</span>:<span class="time-btn" id="minutes">00<span>
+              </div>
+              <div id="hour-picker" class="time-picker p-4">
+                <div class="row">
+                  <div class="col-2"><span class="item">00</span></div>
+                  <div class="col-2"><span class="item">01</span></div>
+                  <div class="col-2"><span class="item">02</span></div>
+                  <div class="col-2"><span class="item">03</span></div>
+                  <div class="col-2"><span class="item">04</span></div>
+                  <div class="col-2"><span class="item">05</span></div>
+                  <div class="col-2"><span class="item">06</span></div>
+                  <div class="col-2"><span class="item">07</span></div>
+                  <div class="col-2"><span class="item">08</span></div>
+                  <div class="col-2"><span class="item">09</span></div>
+                  <div class="col-2"><span class="item">10</span></div>
+                  <div class="col-2"><span class="item">11</span></div>
+                  <div class="col-2"><span class="item active">12</span></div>
+                  <div class="col-2"><span class="item">13</span></div>
+                  <div class="col-2"><span class="item">14</span></div>
+                  <div class="col-2"><span class="item">15</span></div>
+                  <div class="col-2"><span class="item">16</span></div>
+                  <div class="col-2"><span class="item">17</span></div>
+                  <div class="col-2"><span class="item">18</span></div>
+                  <div class="col-2"><span class="item">19</span></div>
+                  <div class="col-2"><span class="item">20</span></div>
+                  <div class="col-2"><span class="item">21</span></div>
+                  <div class="col-2"><span class="item">22</span></div>
+                  <div class="col-2"><span class="item">23</span></div>
+                </div>
+              </div>
+              <div id="minute-picker" class="time-picker p-4">
+                <div class="row">
+                  <div class="col-2"><span class="item">00</span></div>
+                  <div class="col-2"><span class="item">01</span></div>
+                  <div class="col-2"><span class="item">02</span></div>
+                  <div class="col-2"><span class="item">03</span></div>
+                  <div class="col-2"><span class="item">04</span></div>
+                  <div class="col-2"><span class="item">05</span></div>
+                  <div class="col-2"><span class="item">06</span></div>
+                  <div class="col-2"><span class="item">07</span></div>
+                  <div class="col-2"><span class="item">08</span></div>
+                  <div class="col-2"><span class="item">09</span></div>
+                  <div class="col-2"><span class="item">10</span></div>
+                  <div class="col-2"><span class="item">11</span></div>
+                  <div class="col-2"><span class="item active">12</span></div>
+                  <div class="col-2"><span class="item">13</span></div>
+                  <div class="col-2"><span class="item">14</span></div>
+                  <div class="col-2"><span class="item">15</span></div>
+                  <div class="col-2"><span class="item">16</span></div>
+                  <div class="col-2"><span class="item">17</span></div>
+                  <div class="col-2"><span class="item">18</span></div>
+                  <div class="col-2"><span class="item">19</span></div>
+                  <div class="col-2"><span class="item">20</span></div>
+                  <div class="col-2"><span class="item">21</span></div>
+                  <div class="col-2"><span class="item">22</span></div>
+                  <div class="col-2"><span class="item">23</span></div>
+                  <div class="col-2"><span class="item">24</span></div>
+                  <div class="col-2"><span class="item">25</span></div>
+                  <div class="col-2"><span class="item">26</span></div>
+                  <div class="col-2"><span class="item">27</span></div>
+                  <div class="col-2"><span class="item">28</span></div>
+                  <div class="col-2"><span class="item">29</span></div>
+                  <div class="col-2"><span class="item">30</span></div>
+                  <div class="col-2"><span class="item">31</span></div>
+                  <div class="col-2"><span class="item">32</span></div>
+                  <div class="col-2"><span class="item">33</span></div>
+                  <div class="col-2"><span class="item">34</span></div>
+                  <div class="col-2"><span class="item">35</span></div>
+                  <div class="col-2"><span class="item">36</span></div>
+                  <div class="col-2"><span class="item">37</span></div>
+                  <div class="col-2"><span class="item">38</span></div>
+                  <div class="col-2"><span class="item">39</span></div>
+                  <div class="col-2"><span class="item">40</span></div>
+                  <div class="col-2"><span class="item">41</span></div>
+                  <div class="col-2"><span class="item">42</span></div>
+                  <div class="col-2"><span class="item">43</span></div>
+                  <div class="col-2"><span class="item">44</span></div>
+                  <div class="col-2"><span class="item">45</span></div>
+                  <div class="col-2"><span class="item">46</span></div>
+                  <div class="col-2"><span class="item">47</span></div>
+                  <div class="col-2"><span class="item">48</span></div>
+                  <div class="col-2"><span class="item">49</span></div>
+                  <div class="col-2"><span class="item">50</span></div>
+                  <div class="col-2"><span class="item">51</span></div>
+                  <div class="col-2"><span class="item">52</span></div>
+                  <div class="col-2"><span class="item">53</span></div>
+                  <div class="col-2"><span class="item">54</span></div>
+                  <div class="col-2"><span class="item">55</span></div>
+                  <div class="col-2"><span class="item">56</span></div>
+                  <div class="col-2"><span class="item">57</span></div>
+                  <div class="col-2"><span class="item">58</span></div>
+                  <div class="col-2"><span class="item">59</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <textarea type="text" class="clock-description" placeholder="Descrição"></textarea>
+          <button class="clock-button">Criar</button>
+        </div>
+      </section>
+      <section class="task-container task-container-morning"></section>
+      <section class="task-container task-container-afternoon hidden"></section>
+      <section class="task-container task-container-night hidden"></section>
+
+      <svg xmlns="http://www.w3.org/2000/svg" style="display: none" id="task-remove" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22"">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+      </svg>
+      
+    </main>
+    <script src="scripts.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/service-worker.js')
+              .then(function(registration) {
+                console.log('Service Worker registrado com sucesso:', registration);
+              })
+              .catch(function(error) {
+                console.log('Falha ao registrar o Service Worker:', error);
+              });
+          });
+        }
+      </script>      
+  </body>
+</html>

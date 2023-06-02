@@ -1,0 +1,427 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+header {
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+body{
+  height: 100vh;
+}
+
+.flex{
+  display: flex !important;
+}
+
+.body-morning{
+  background: linear-gradient(#03A0C5, #A3D5E0);
+  display: block;
+}
+
+.body-afternoon{
+  background: linear-gradient(#E68A41, #E59B72);
+}
+
+.body-night{
+  background: linear-gradient(#000424, #006089);
+}
+
+.body-add{
+  background: #fff;
+}
+
+.menu-icon{
+  position: absolute;
+  left: 25px;
+  height: 56px;
+  top: 0;
+}
+
+.menu-main {
+  background: #fff;
+  box-shadow: 50vw 0px #00000050;
+  display: none;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 50vw;
+  z-index: 1;
+}
+
+.menu-title {
+  color: #000;
+  margin: 20px 0 0 10px;
+  font-size: 13px;
+  line-height: 25px;
+}
+
+.menu-close {
+  position: absolute;
+  left: calc(50vw - 20px);
+  transform: translateX(-100%);
+  margin-top: 20px;
+}
+
+.menu-bottom{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-about {
+  padding: 20px 0;
+  border-bottom: 1px solid #c5c5c5;
+  width: 100%;
+  text-align: center;
+}
+
+.menu-version {
+  color: #C5C5C5;
+  margin: 20px 0;
+}
+
+.about-us {
+  background: #fff;
+  display: none;
+  flex-direction: column;
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: 2;
+}
+
+.about-title{
+  margin: 20px 0 0 20px;
+}
+
+.about-text {
+  margin: 30px 0 0 20px;
+}
+
+.about-close {
+  position: absolute;
+  right: 20px;
+  margin-top: 20px;
+}
+
+.title-add{
+  color: #000000;
+}
+
+.hidden{
+  display: none !important;
+}
+
+main {
+  padding: 10px;
+}
+
+button {
+  background-color: transparent;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#days, #seconds{
+  display: none;
+}
+
+.button-add {
+  background-color: #a882ee;
+  bottom: 40px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  height: 60px;
+  left: 50%;
+  position: absolute;
+  padding: 15px 0;
+  transform: translateX(-50%);
+  width: 60px;
+}
+
+.button-main{
+  color: #000;
+}
+
+.button-section {
+  background-color: #fff;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  left: 50%;
+  padding: 15px 0;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.task-container{
+  overflow: auto;
+  max-height: 70vh;
+}
+
+.task-item {
+  background: #fff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: center;
+  margin: 0 15px 15px;
+  padding: 0 15px;
+}
+
+.task-daily strong {
+  color: #1D1617;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.task-daily span {
+  color: #7B6F72;
+  font-size: 14px;
+}
+
+.task-info {
+  display: flex;
+  align-items: center;
+}
+
+.task-checkbox {
+  position: relative;
+}
+
+.task-checkbox:checked::after {
+  background-color: #00000050;
+  border-radius: 15px;
+  content: '';
+  height: 100px;
+  left: -19px;
+  position: absolute;
+  top: -18.5px;
+  width: calc(100vw - 50px);
+}
+
+.task-observation{
+    color: #7B6F72;
+    font-size: 14px;
+    height: 45px;
+    margin-top: 5px;
+    padding-right: 15px;
+    overflow-y: auto;
+}
+
+.task-remove {
+  color: #1D1617;
+}
+
+.task-observation {
+  /* Background do scroll */
+  scrollbar-width: thin;
+  scrollbar-color: #fff #f1f1f1;
+
+  /* Estilo da barra do scroll */
+  scrollbar-track-color: #f1f1f1;
+  scrollbar-face-color: #fff;
+}
+
+/* Estilo da barra do scroll - Firefox */
+.task-observation::-moz-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+}
+
+.task-observation::-moz-scrollbar-thumb {
+  background-color: #7B6F72;
+  border-radius: 10px;
+  width: 5px;
+  height: 5px;
+}
+
+/* Estilo da barra do scroll - WebKit, Chrome, Edge, Safari */
+.task-observation::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f1f1f1;
+	border-radius: 10px;
+}
+
+.task-observation::-webkit-scrollbar-thumb {
+  background-color: #7B6F72;
+  border-radius: 10px;
+  width: 5px;
+  height: 5px;
+}
+
+.task-item:nth-last-child(1){
+  margin:0 15px 0;
+}
+
+.add-container {
+  background: linear-gradient(#7E93FF, #9DCEFF);
+  height: 550px;
+  border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  margin: 0 15px;
+  max-height: 550px;
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 270px;
+}
+
+.clock-title {
+  background: transparent;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 35px;
+}
+
+.clock-title::placeholder, .clock-title:focus {
+  color: #fff; 
+  outline: none !important;
+  border: none;
+  box-shadow: none;
+}
+
+.clock-span {
+  text-align: center;
+  color: #494949;
+  font-size: 20px;
+  line-height: 20px;
+  margin: 10px 0;
+}
+
+.clock-description {
+  background: #fff;
+  border-radius: 16px;
+  border: none;
+  color: #343434;
+  height: 300px;
+  max-height: 300px;
+  max-width: 250px;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  width: 250px;
+}
+
+.clock-description::placeholder {
+  color: #343434; 
+  outline: none !important;
+  border: none;
+  box-shadow: none;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.clock-description:focus {
+  color: #343434;
+  outline: none !important;
+  border: none;
+  padding: 10px;
+  box-shadow: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.clock-button {
+  background: linear-gradient(0.25turn, #EEA4CE, #C58BF2);
+  height: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 16px;
+  margin: 20px 0;
+}
+
+.container-fluid{
+  color: #494949;
+}
+
+.time{
+  position: relative;
+}
+
+.time .selected{
+  text-align: center;
+  font-size: 25px;
+}
+
+.time .time-btn{
+  transition: all ease-out 0.3s;
+  cursor: pointer;
+}
+
+.time-picker{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all ease-out 0.3s;
+  top: 100%;
+  pointer-events: none;
+  height: 320px;
+  width: 270px;
+  max-width: 270px;
+  max-height: 320px;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 16px;
+  font-size: 25px;
+  color: #000;
+  background: #ffffffcf;
+}
+
+.time-picker.active{
+  opacity: 1;
+  top: 100%;
+  pointer-events: all;
+}
+
+.time-picker.active .item{
+  cursor: pointer;
+  transition: all ease-out 0.3s;
+  transition-duration: 0.3s;
+  opacity: 0.7;
+  display: block;
+  transform-origin: center;
+}
+
+.time-picker.active .item:hover{
+  opacity: 1;
+  transform: scale(1.2, 1.2);
+}
+
+.time-picker.active .item.active{
+  opacity: 1;
+}
+
+.task-daily{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
