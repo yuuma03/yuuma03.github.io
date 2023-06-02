@@ -356,12 +356,3 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('savedItems', JSON.stringify([]));
   }
 });
-nutePicker.classList.contains('active');
-  if (hourPicker.classList.contains('active') || minutePicker.classList.contains('active')) {
-    timePickerClose();
-  }
-  if (shouldOpen) {
-    minuteButton.classList.add('active');
-    minutePicker.classList.add('active');
-  }
-});
