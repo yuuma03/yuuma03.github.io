@@ -110,6 +110,8 @@ const menuAbout = document.querySelector('.menu-about');
 const aboutUs = document.querySelector('.about-us');
 const aboutClose = document.querySelector('.about-close');
 
+const closeAdd = document.querySelector('.close-add');
+
 menuIcons.addEventListener('click', () => {
   menuMain.classList.add('flex');
 });
@@ -206,6 +208,29 @@ buttonAdd.addEventListener('click', () => {
 
   buttonSection.classList.add('hidden');
   addContainer.classList.remove('hidden');
+
+  closeAdd.classList.remove('hidden');
+  menuIcons.classList.add('hidden');
+});
+
+closeAdd.addEventListener('click', () => {
+  menuIcons.classList.remove('hidden');
+
+  document.body.classList.remove('body-afternoon');
+  document.body.classList.remove('body-night');
+  document.body.classList.add('body-morning');
+  document.body.classList.remove('body-add');
+
+  titleMorining.classList.remove('hidden');
+  titleAfternoon.classList.add('hidden');
+  titleNight.classList.add('hidden');
+
+  closeAdd.classList.add('hidden');
+
+  titleAdd.classList.add('hidden');
+  addContainer.classList.add('hidden');
+  buttonSection.classList.remove('hidden');
+  addContainer.classList.add('hidden');
 });
 
 clockButton.addEventListener('click', () => {
@@ -329,5 +354,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   } else {
     localStorage.setItem('savedItems', JSON.stringify([]));
+  }
+});
+nutePicker.classList.contains('active');
+  if (hourPicker.classList.contains('active') || minutePicker.classList.contains('active')) {
+    timePickerClose();
+  }
+  if (shouldOpen) {
+    minuteButton.classList.add('active');
+    minutePicker.classList.add('active');
   }
 });
